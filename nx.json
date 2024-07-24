@@ -6,21 +6,14 @@
             "runner": "@nrwl/nx-cloud",
             "options": {
                 "cacheableOperations": ["build", "lint", "test", "e2e"],
-                "accessToken": "NmZiYTA5YzMtNjEyZS00MmJlLTk5M2UtMGI3NDJmMTNkNjQyfHJlYWQtd3JpdGU="
+                "accessToken": "ZjQxOGVhNzYtYjU0ZS00MjM1LThiZjctMDRjNTY2N2Q3ZWYxfHJlYWQtd3JpdGU="
             }
         }
     },
     "targetDefaults": {
-        "build": {
-            "dependsOn": ["^build"],
-            "inputs": ["production", "^production"]
-        },
-        "lint": {
-            "inputs": ["default", "{workspaceRoot}/.eslintrc.json"]
-        },
-        "test": {
-            "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"]
-        }
+        "build": { "dependsOn": ["^build"], "inputs": ["production", "^production"] },
+        "lint": { "inputs": ["default", "{workspaceRoot}/.eslintrc.json"] },
+        "test": { "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"] }
     },
     "namedInputs": {
         "default": ["{projectRoot}/**/*", "sharedGlobals"],
@@ -33,9 +26,6 @@
         ],
         "sharedGlobals": []
     },
-    "workspaceLayout": {
-        "appsDir": "packages",
-        "libsDir": "packages"
-    },
+    "workspaceLayout": { "appsDir": "packages", "libsDir": "packages" },
     "defaultProject": "swaps-keepers"
 }
